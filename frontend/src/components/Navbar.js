@@ -6,7 +6,7 @@ const Navbar = () => {
 
   useEffect(() => {
     // Fetch subject count from the backend API
-    axios.get('https://student-attendance-tracker-q4nb.vercel.app/subjects')
+    axios.get('https://student-attendance-tracker-7pqc-lriairf5g.vercel.app/subjects')
       .then(response => {
         setSubjectCount(response.data.length);
       })
