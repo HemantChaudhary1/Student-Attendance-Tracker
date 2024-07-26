@@ -100,7 +100,7 @@ const SubjectList = () => {
 
   useEffect(() => {
     // Fetch subjects from the backend API
-    axios.get('http://localhost:5000/subjects')
+    axios.get('https://student-attendance-tracker-q4nb.vercel.app/subjects')
       .then(response => {
         // Update the subjects list after fetching
         setSubjects(response.data.map(subject => ({
@@ -116,7 +116,7 @@ const SubjectList = () => {
   }, []);
 
   const deleteSubject = (id) => {
-    axios.delete(`http://localhost:5000/subjects/${id}`)
+    axios.delete(`https://student-attendance-tracker-q4nb.vercel.app/subjects/${id}`)
       .then(response => {
         // Update the subjects list after deletion
         setSubjects(subjects.filter(subject => subject._id !== id));
@@ -141,7 +141,7 @@ const SubjectList = () => {
   };
 
   const saveEdit = () => {
-    axios.put(`http://localhost:5000/subjects/${editedSubjectId}`, {
+    axios.put(`https://student-attendance-tracker-q4nb.vercel.app/subjects/${editedSubjectId}`, {
       attendedClasses: editedAttendedClasses,
       totalClasses: editedTotalClasses,
     })
