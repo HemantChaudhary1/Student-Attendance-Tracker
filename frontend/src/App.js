@@ -11,7 +11,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchSubjects = async () => {
-      const response = await axios.get('https://student-attendance-tracker-7pqc-lriairf5g.vercel.app/subjects');
+      const response = await axios.get('https://student-attendance-tracker.onrender.com/subjects');
       setSubjects(response.data.map((subject) => subject.name));
     };
     fetchSubjects();

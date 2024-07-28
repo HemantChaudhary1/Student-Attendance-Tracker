@@ -31,7 +31,7 @@ const SubjectForm = ({ addSubject }) => {
         e.preventDefault();
         const missedClasses = totalClasses - attendedClasses;
         const totalMissedClasses = missedClasses > 0 ? missedClasses : 0;
-        axios.post('https://student-attendance-tracker-7pqc-lriairf5g.vercel.app/subjects', { name: subject, attendedClasses, totalClasses, missedClasses, totalMissedClasses })
+        axios.post('https://student-attendance-tracker.onrender.com/subjects', { name: subject, attendedClasses, totalClasses, missedClasses, totalMissedClasses })
             .then(response => {
                 console.log('Subject added successfully:', response.data);
             })
